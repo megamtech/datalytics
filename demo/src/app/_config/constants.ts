@@ -10,24 +10,13 @@ export class ConstantService {
 
   public static BASE_URL =
     ConstantService.PROTOCOL + ConstantService.DOMAIN + "/datalyticsapi";
-  // public static BASE_URL =
-  //   ConstantService.PROTOCOL + ConstantService.DOMAIN + "/saffronapi";
+
   public static IMG_BASE_URL =
-    ConstantService.PROTOCOL + ConstantService.DOMAIN + "/accounting_images/";
+    ConstantService.PROTOCOL + ConstantService.DOMAIN + "/images/";
 
   public static API_URL = {
     user: {
-      login: "auth/login",
-      forgot_password: "user/forgot_password",
-      change_password: "user/change_password",
-      reset_password: "user/reset_password",
-      suspenduser: "user/suspend_user",
-      activate_user: "user/activate_user",
-      create: "user/create",
-      view: "user/view",
-      edit: "user/edit",
-      viewall: "user/viewall",
-      delete: "user/delete",
+     
     },
     country: {
       data: "country/viewall",
