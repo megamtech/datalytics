@@ -1,24 +1,15 @@
 # Datalytics
 
-[[_TOC_]]
 
-# Registry setup
-**npm command**
-```shell
-echo @megamtech-labs:registry=https://labs.megamtech.com/api/v4/packages/npm/ >> .npmrc
-```
-yarn command
-```shell
-echo \"@megamtech-labs:registry\" \"https://labs.megamtech.com/api/v4/packages/npm/\" >> .yarnrc
-```
+
 # Installation
    **npm command**
 ```shell
-npm i @megamtech-labs/datalytics
+npm i megamtech/datalytics
 ```
 **yarn command**
 ```shell
-yarn add @megamtech-labs/datalytics
+yarn add megamtech/datalytics
 ```
 # Usage
 ## Grid
