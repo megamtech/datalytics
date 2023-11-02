@@ -1,0 +1,557 @@
+{
+  "totals": {
+    "pre": [],
+    "post": [],
+    "grandTotal": []
+  },
+  "count": 58,
+  "data": [
+    {
+      "account_head": "Opening Balance",
+      "party_name": "Opening Balance",
+      "credit": 0,
+      "debit": 0,
+      "tx_date": "",
+      "voucher_type": "",
+      "to_by": "",
+      "voucher_ref_id": ""
+    },
+    {
+      "_id": "6043643f7ca5472b0a1027e0",
+      "credit": 0,
+      "debit": 90,
+      "tx_date": 1603305000000,
+      "to_by": "To",
+      "particulars": "Sgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6043643f7ca5472b0a1027e2",
+      "credit": 0,
+      "debit": 90,
+      "tx_date": 1603305000000,
+      "to_by": "To",
+      "particulars": "Cgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6043643f7ca5472b0a1027e4",
+      "credit": 0,
+      "debit": 1000,
+      "tx_date": 1603305000000,
+      "to_by": "To",
+      "particulars": "printing charges",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6043643f7ca5472b0a1027de",
+      "credit": 1180,
+      "debit": 0,
+      "voucher_ref_id": null,
+      "tx_date": 1603305000000,
+      "to_by": "By",
+      "particulars": "saibaba business solution pvt ltd",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6043632a7ca5472b0a102612",
+      "credit": 5900,
+      "debit": 0,
+      "tx_date": 1601404200000,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6043632a7ca5472b0a102610",
+      "credit": 0,
+      "debit": 5900,
+      "tx_date": 1601404200000,
+      "to_by": "To",
+      "particulars": "saibaba business solution pvt ltd",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604362787ca5472b0a10248c",
+      "credit": 0,
+      "debit": 5900,
+      "tx_date": 1601058600000,
+      "to_by": "To",
+      "particulars": "printing charges",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604362787ca5472b0a102488",
+      "debit": 0,
+      "credit": 450,
+      "tx_date": 1601058600000,
+      "to_by": "By",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604362787ca5472b0a10248a",
+      "credit": 5000,
+      "debit": 0,
+      "tx_date": 1601058600000,
+      "to_by": "By",
+      "particulars": "printing charges",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604362787ca5472b0a102486",
+      "credit": 450,
+      "debit": 0,
+      "tx_date": 1601058600000,
+      "to_by": "By",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604362517ca5472b0a10245c",
+      "credit": 0,
+      "debit": 450,
+      "tx_date": 1599157800000,
+      "to_by": "To",
+      "particulars": "Cgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604362517ca5472b0a10245e",
+      "credit": 0,
+      "debit": 5000,
+      "tx_date": 1599157800000,
+      "to_by": "To",
+      "particulars": "printing charges",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604362517ca5472b0a102458",
+      "credit": 5900,
+      "debit": 0,
+      "voucher_ref_id": null,
+      "tx_date": 1599157800000,
+      "to_by": "By",
+      "particulars": "saibaba business solution pvt ltd",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604362517ca5472b0a10245a",
+      "credit": 0,
+      "debit": 450,
+      "tx_date": 1599157800000,
+      "to_by": "To",
+      "particulars": "Sgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604361aa7ca5472b0a1023c6",
+      "credit": 0,
+      "debit": 236,
+      "tx_date": 1615028631810,
+      "to_by": "To",
+      "particulars": "saibaba business solution pvt ltd",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604361aa7ca5472b0a1023c8",
+      "credit": 236,
+      "debit": 0,
+      "tx_date": 1615028631810,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604361887ca5472b0a1023b0",
+      "debit": 0,
+      "credit": 18,
+      "tx_date": 1588357800000,
+      "to_by": "By",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604361887ca5472b0a1023b2",
+      "credit": 200,
+      "debit": 0,
+      "tx_date": 1588357800000,
+      "to_by": "By",
+      "particulars": "printing charges",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604361887ca5472b0a1023b4",
+      "credit": 0,
+      "debit": 236,
+      "tx_date": 1588357800000,
+      "to_by": "To",
+      "particulars": "printing charges",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604361887ca5472b0a1023ae",
+      "credit": 18,
+      "debit": 0,
+      "tx_date": 1588357800000,
+      "to_by": "By",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604361447ca5472b0a102267",
+      "credit": 0,
+      "debit": 18,
+      "tx_date": 1586889000000,
+      "to_by": "To",
+      "particulars": "Cgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604361447ca5472b0a102269",
+      "credit": 0,
+      "debit": 200,
+      "tx_date": 1586889000000,
+      "to_by": "To",
+      "particulars": "printing charges",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604361447ca5472b0a102263",
+      "credit": 236,
+      "debit": 0,
+      "voucher_ref_id": null,
+      "tx_date": 1586889000000,
+      "to_by": "By",
+      "particulars": "saibaba business solution pvt ltd",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604361447ca5472b0a102265",
+      "credit": 0,
+      "debit": 18,
+      "tx_date": 1586889000000,
+      "to_by": "To",
+      "particulars": "Sgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604360ea7ca5472b0a10223e",
+      "credit": 0,
+      "debit": 2000,
+      "tx_date": 1596220200000,
+      "to_by": "To",
+      "particulars": "printing charges",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604360ea7ca5472b0a102238",
+      "credit": 2360,
+      "debit": 0,
+      "voucher_ref_id": null,
+      "tx_date": 1596220200000,
+      "to_by": "By",
+      "particulars": "saibaba business solution pvt ltd",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "604360ea7ca5472b0a10223a",
+      "credit": 0,
+      "debit": 180,
+      "tx_date": 1596220200000,
+      "to_by": "To",
+      "particulars": "Sgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "604360ea7ca5472b0a10223c",
+      "credit": 0,
+      "debit": 180,
+      "tx_date": 1596220200000,
+      "to_by": "To",
+      "particulars": "Cgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6040b860c100eb20bfe678ea",
+      "credit": 5000,
+      "debit": 0,
+      "tx_date": 1614854232444,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6040b860c100eb20bfe678ec",
+      "credit": 0,
+      "debit": 5000,
+      "tx_date": 1614854232444,
+      "to_by": "To",
+      "particulars": "BANK CHARGES",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "603dd4f0f5f57b5f92cdf1c0",
+      "credit": 0,
+      "debit": 100,
+      "tx_date": 1614664933737,
+      "to_by": "To",
+      "particulars": "salary ",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "603dd4f0f5f57b5f92cdf1be",
+      "credit": 100,
+      "debit": 0,
+      "tx_date": 1614664933737,
+      "to_by": "By",
+      "particulars": "Petty Cash",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "603ce54cf5f57b5f92cde3ef",
+      "credit": 100,
+      "debit": 0,
+      "tx_date": 1614603590780,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "603ce54cf5f57b5f92cde3f1",
+      "credit": 0,
+      "debit": 100,
+      "tx_date": 1614603590780,
+      "to_by": "To",
+      "particulars": "BANK CHARGES",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "603ce4f3f5f57b5f92cde350",
+      "credit": 0,
+      "debit": 1.8,
+      "tx_date": 1614603496629,
+      "to_by": "To",
+      "particulars": "BANK CHARGES",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "603ce4f3f5f57b5f92cde34e",
+      "credit": 1.8,
+      "debit": 0,
+      "tx_date": 1614603496629,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "603cd608f5f57b5f92cddb56",
+      "credit": 0,
+      "debit": 1000,
+      "tx_date": 1614599572421,
+      "to_by": "To",
+      "particulars": "salary ",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "603cd608f5f57b5f92cddb55",
+      "credit": 1000,
+      "debit": 0,
+      "tx_date": 1614599572421,
+      "to_by": "By",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "603ccf02f5f57b5f92cdd67b",
+      "credit": 0,
+      "debit": 29.5,
+      "tx_date": 1614597881986,
+      "to_by": "To",
+      "particulars": "BANK CHARGES",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "603ccf02f5f57b5f92cdd679",
+      "credit": 29.5,
+      "debit": 0,
+      "tx_date": 1614597881986,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "603ca2ccf5f57b5f92cdae6b",
+      "credit": 2399,
+      "debit": 0,
+      "tx_date": 1614586560023,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "603ca2ccf5f57b5f92cdae6d",
+      "credit": 0,
+      "debit": 2399,
+      "tx_date": 1614586560023,
+      "to_by": "To",
+      "particulars": "intrest on TDS",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038e14df5f57b5f92cd8995",
+      "credit": 21240,
+      "debit": 0,
+      "tx_date": 1598466600000,
+      "to_by": "By",
+      "particulars": "Petty Cash",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6038e14df5f57b5f92cd8993",
+      "credit": 0,
+      "debit": 21240,
+      "tx_date": 1598466600000,
+      "to_by": "To",
+      "particulars": "elixir business solutions",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038e0d7f5f57b5f92cd8895",
+      "credit": 0,
+      "debit": 18000,
+      "tx_date": 1595788200000,
+      "to_by": "To",
+      "particulars": "Professional charges",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038e0d7f5f57b5f92cd8891",
+      "credit": 0,
+      "debit": 1620,
+      "tx_date": 1595788200000,
+      "to_by": "To",
+      "particulars": "Sgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038e0d7f5f57b5f92cd8893",
+      "credit": 0,
+      "debit": 1620,
+      "tx_date": 1595788200000,
+      "to_by": "To",
+      "particulars": "Cgst Input",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038e0d7f5f57b5f92cd888f",
+      "credit": 21240,
+      "debit": 0,
+      "voucher_ref_id": null,
+      "tx_date": 1595788200000,
+      "to_by": "By",
+      "particulars": "elixir business solutions",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6038d974f5f57b5f92cd84b0",
+      "credit": 0,
+      "debit": 400000,
+      "tx_date": 1614338412197,
+      "to_by": "To",
+      "particulars": "salary ",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038d974f5f57b5f92cd84ae",
+      "credit": 400000,
+      "debit": 0,
+      "tx_date": 1614338412197,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6038d8e0f5f57b5f92cd8492",
+      "credit": 590,
+      "debit": 0,
+      "tx_date": 1614338266518,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6038d8e0f5f57b5f92cd8494",
+      "credit": 0,
+      "debit": 590,
+      "tx_date": 1614338266518,
+      "to_by": "To",
+      "particulars": "BANK CHARGES",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038d8a5f5f57b5f92cd847b",
+      "credit": 0,
+      "debit": 29.5,
+      "tx_date": 1614337336571,
+      "to_by": "To",
+      "particulars": "BANK CHARGES",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038d8a5f5f57b5f92cd8479",
+      "credit": 29.5,
+      "debit": 0,
+      "tx_date": 1614337336571,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6038d89df5f57b5f92cd8476",
+      "credit": 0,
+      "debit": 300000,
+      "tx_date": 1614337284868,
+      "to_by": "To",
+      "particulars": "salary ",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038d89df5f57b5f92cd8474",
+      "credit": 300000,
+      "debit": 0,
+      "tx_date": 1614337284868,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "_id": "6038d3def861e43735d1cc29",
+      "credit": 0,
+      "debit": 29.5,
+      "tx_date": 1614336793031,
+      "to_by": "To",
+      "particulars": "BANK CHARGES",
+      "voucher_type": "Payment"
+    },
+    {
+      "_id": "6038d3def861e43735d1cc27",
+      "credit": 29.5,
+      "debit": 0,
+      "tx_date": 1614336793031,
+      "to_by": "By",
+      "particulars": "ICICI BANK",
+      "voucher_type": "Receipt"
+    },
+    {
+      "account_head": "Closing Balance",
+      "party_name": "Closing Balance",
+      "debit": 0,
+      "tx_date": "",
+      "voucher_type": "",
+      "to_by": "",
+      "voucher_ref_id": ""
+    }
+  ],
+  "opening_balance": [],
+  "closing_balance": [
+    {
+      "_id": "6038b93ff861e43735d1b6a4"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<div class="datalytics-tabular-report" id="{{id}}_container">
+  <div class="table" *ngIf="showLoadingBar==true && _columns.length>0">
+    <ngx-datatable class="material" [rows]="loadingData" [columns]="loaderColumns" [headerHeight]="50"
+      [footerHeight]="50" rowHeight="auto" [reorderable]="false" [columnMode]="'force'" [externalPaging]="false"
+      [count]="5" [offset]="offset" [limit]="pageSize" [scrollbarV]="false" [externalSorting]="false">
+
+      <ngx-datatable-column *ngFor="let col of columns">
+        <ng-template let-column="column" ngx-datatable-header-template>{{ col.name}} </ng-template>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+
+          <div class="text-line animated-background "></div>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+  <div class="table" *ngIf="showLoadingBar==false">
+    <div class="locale-no-records" *ngIf="_data.count===0">
+
+      {{locale.no_records}}
+
+    </div>
+    <div class="locale-no-records" *ngIf="_data.count>0">
+      <!-- {{_columns|json}} -->
+      <ngx-datatable class="material" [rows]="_data.result" [columns]="_columns" [headerHeight]="50" [footerHeight]="50"
+        rowHeight="auto" [reorderable]="false" [columnMode]="'flex'" [externalPaging]="true" [count]="_data.count"
+        [offset]="offset" [limit]="pageSize" (page)="onPageChangeEvent($event)" [scrollbarV]="false"
+        [summaryRow]=enableSummary [summaryPosition]=summaryColumns.position [summaryHeight]="summaryColumns.height"
+        [externalSorting]="true" [scrollbarH]="true" [sorts]="defaultSort" (sort)="onSortChangeEvent($event)">
+        <ng-template ngx-datatable-header-template let-column="column" let-sort="sortFn" >
+          <span class="datatable-header-cell-wrapper"><span class="datatable-header-cell-label draggable text-truncate"
+              (click)="sort()">
+              <b>{{ column.name }}</b>
+            </span></span>
+        </ng-template>
+      </ngx-datatable>
+
+    </div>
+  </div>
+</div>
+<ng-template #summaryCell let-rows="rows" let-columns="columns">
+  {{rows|json}}
+  {{columns|json}}
+  <!-- {{cell|json}} -->
+  Sundar
+  <!-- {{rows|json}} -->
+  <!-- <div class="name-container"> -->
+  <!-- <div class="chip" *ngFor="let name of getNames()"> -->
+  <!-- <span class="chip-content">{{ name }}</span> -->
+  <!-- </div> -->
+  <!-- </div> -->
+</ng-template>

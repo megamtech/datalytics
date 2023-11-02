@@ -1,0 +1,425 @@
+[{
+  "_id": {
+    "$oid": "601b8a51979c4904381c983d"
+  },
+  "tx_date":  "2021-02-04T05:46:08.268Z",
+  "bal_qty": 2,
+  "name": "Mouse",
+  "value": 200
+},{
+  "_id": {
+    "$oid": "6025272d54cf197d2554150c"
+  },
+  "tx_date":  "2021-02-11T12:23:03.375Z",
+  "bal_qty": 1,
+  "name": "IbuBrufen",
+  "value": 3255
+},{
+  "_id": {
+    "$oid": "602bcf60c03b1b7af8ba0aee"
+  },
+  "tx_date":  "2021-02-08T18:30:00Z",
+  "bal_qty": 25,
+  "name": "CIRCUIT BOARD",
+  "value": 625000
+},{
+  "_id": {
+    "$oid": "602bcfccc03b1b7af8ba0b19"
+  },
+  "tx_date":  "2021-02-15T18:30:00Z",
+  "bal_qty": 10,
+  "name": "CIRCUIT BOARD",
+  "value": 150000
+},{
+  "_id": {
+    "$oid": "602cc3e9fd8e667d3f35503b"
+  },
+  "tx_date":  "2021-02-16T18:30:00Z",
+  "bal_qty": 25,
+  "name": "CIRCUIT BOARD",
+  "value": 6250000
+},{
+  "_id": {
+    "$oid": "6030bb49b3fdf6655b334398"
+  },
+  "tx_date":  "2021-02-20T07:32:41.557Z",
+  "bal_qty": 10,
+  "name": "PLC",
+  "value": 2390000
+},{
+  "_id": {
+    "$oid": "60408eb8c100eb20bfe66f48"
+  },
+  "tx_date":  "2021-03-04T07:39:29.332Z",
+  "bal_qty": 100,
+  "name": "springs 100ML/500ML BOTTLE",
+  "value": null
+},{
+  "_id": {
+    "$oid": "60435e857ca5472b0a101a1b"
+  },
+  "tx_date":  "2020-03-31T18:30:00Z",
+  "bal_qty": 993,
+  "name": "Energy meter ",
+  "value": null
+},{
+  "_id": {
+    "$oid": "6045f3627ca5472b0a106760"
+  },
+  "tx_date":  "2021-03-08T09:50:02.734Z",
+  "bal_qty": 10,
+  "name": "water bottles",
+  "value": 32500
+},{
+  "_id": {
+    "$oid": "604607127ca5472b0a108ca9"
+  },
+  "tx_date":  "2021-03-08T11:13:35.170Z",
+  "bal_qty": 120000,
+  "name": "Springs Pet Bottle 300 ML",
+  "value": 101952000000000000
+},{
+  "_id": {
+    "$oid": "604621987ca5472b0a10b19d"
+  },
+  "tx_date":  "2021-03-08T13:06:29.281Z",
+  "bal_qty": 100,
+  "name": "test",
+  "value": 100000
+},{
+  "_id": {
+    "$oid": "6047734e71b276504f103042"
+  },
+  "tx_date":  "2021-03-08T10:27:03.823Z",
+  "bal_qty": 118550,
+  "name": "Springs Pet Bottle 300 ML",
+  "value": 71130000000
+},{
+  "_id": {
+    "$oid": "604776ca71b276504f10318d"
+  },
+  "tx_date":  "2021-02-09T18:30:00Z",
+  "bal_qty": 1000,
+  "name": "spring bottle 1000ml",
+  "value": 8250000
+},{
+  "_id": {
+    "$oid": "60477ace71b276504f10346a"
+  },
+  "tx_date":  "2021-01-13T18:30:00Z",
+  "bal_qty": 29998,
+  "name": "spring bottle 1000ml",
+  "value": 4499700000
+},{
+  "_id": {
+    "$oid": "604789e171b276504f103e2a"
+  },
+  "tx_date":  "2021-03-09T14:44:33.962Z",
+  "bal_qty": 300,
+  "name": "spring bottle 500 ml",
+  "value": null
+},{
+  "_id": {
+    "$oid": "604884ad1de1a82ea8effed4"
+  },
+  "tx_date":  "2021-03-10T08:34:10.659Z",
+  "bal_qty": 85,
+  "name": "PLC",
+  "value": 212500000
+},{
+  "_id": {
+    "$oid": "604a04ebec2a2c6ec76706f3"
+  },
+  "tx_date":  "2020-05-01T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Energy meter ",
+  "value": 2400
+},{
+  "_id": {
+    "$oid": "604a0ce3ec2a2c6ec7670bc1"
+  },
+  "tx_date":  "2021-03-09T13:23:05.602Z",
+  "bal_qty": 10,
+  "name": "CIRCUIT BOARD",
+  "value": 10000
+},{
+  "_id": {
+    "$oid": "604a0d01ec2a2c6ec7670be9"
+  },
+  "tx_date":  "2021-03-11T12:28:19.997Z",
+  "bal_qty": 100,
+  "name": "CIRCUIT BOARD",
+  "value": 2500000000
+},{
+  "_id": {
+    "$oid": "604b42c65f790139ae735de6"
+  },
+  "tx_date":  "2020-05-01T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Energy meter ",
+  "value": 2500
+},{
+  "_id": {
+    "$oid": "604f4fa83c424c69f486bba6"
+  },
+  "tx_date":  "2021-02-28T18:30:00Z",
+  "bal_qty": 9,
+  "name": "CAR INSURANCE",
+  "value": 592830
+},{
+  "_id": {
+    "$oid": "60503ff13c424c69f486e902"
+  },
+  "tx_date":  "2020-04-03T18:30:00Z",
+  "bal_qty": 300,
+  "name": "butter",
+  "value": 30150000
+},{
+  "_id": {
+    "$oid": "6051b9b9a0d7c83facb13d7f"
+  },
+  "tx_date":  "2021-03-17T08:11:28.391Z",
+  "bal_qty": 250,
+  "name": "PLC",
+  "value": null
+},{
+  "_id": {
+    "$oid": "6052d7fcbadd437d2833b3de"
+  },
+  "tx_date":  "2021-03-18T04:32:51.813Z",
+  "bal_qty": 100,
+  "name": "springs 100ML/500ML BOTTLE",
+  "value": null
+},{
+  "_id": {
+    "$oid": "6054375773e05234623afe25"
+  },
+  "tx_date":  "2021-03-15T12:40:28.309Z",
+  "bal_qty": 10,
+  "name": "CAR INSURANCE",
+  "value": 200000
+},{
+  "_id": {
+    "$oid": "605477dca2a66c6621ba7440"
+  },
+  "tx_date":  "2021-03-19T10:05:26.938Z",
+  "bal_qty": 30,
+  "name": "CIRCUIT BOARD",
+  "value": 1800000
+},{
+  "_id": {
+    "$oid": "6059cad1f8a03e64dc2520ad"
+  },
+  "tx_date":  "2020-04-30T18:30:00Z",
+  "bal_qty": 1,
+  "name": "springs 100ML/500ML BOTTLE",
+  "value": 45
+},{
+  "_id": {
+    "$oid": "6059cae1f8a03e64dc2520bf"
+  },
+  "tx_date":  "2021-03-23T11:02:42.153Z",
+  "bal_qty": 2,
+  "name": "spring bottle 1000ml",
+  "value": 312
+},{
+  "_id": {
+    "$oid": "605c19479268a225d023e6b1"
+  },
+  "tx_date":  "2021-03-04T10:52:16.844Z",
+  "bal_qty": 29999,
+  "name": "Springs Pet Bottle 300 ML",
+  "value": 4499850000
+},{
+  "_id": {
+    "$oid": "605c19ba9268a225d023e78e"
+  },
+  "tx_date":  "2021-01-31T18:30:00Z",
+  "bal_qty": 500,
+  "name": "Spring Pet Bottle 500 ml",
+  "value": 1750000
+},{
+  "_id": {
+    "$oid": "605c1f6c9268a225d023ec8a"
+  },
+  "tx_date":  "2021-03-23T11:07:07.402Z",
+  "bal_qty": 145000,
+  "name": "Spring Pet Bottle 500 ml",
+  "value": 73587500000
+},{
+  "_id": {
+    "$oid": "605c1f739268a225d023ec98"
+  },
+  "tx_date":  "2021-03-23T11:06:39.265Z",
+  "bal_qty": 100000,
+  "name": "Springs Pet Bottle 300 ML",
+  "value": 28000000000
+},{
+  "_id": {
+    "$oid": "605c70825e52ff7c1427bef7"
+  },
+  "tx_date":  "2020-03-31T18:30:00Z",
+  "bal_qty": 1,
+  "name": "milk",
+  "value": 500
+},{
+  "_id": {
+    "$oid": "605c70825e52ff7c1427bef8"
+  },
+  "tx_date":  "2020-03-31T18:30:00Z",
+  "bal_qty": 1,
+  "name": "curd",
+  "value": 620
+},{
+  "_id": {
+    "$oid": "605c7c795e52ff7c14280d6b"
+  },
+  "tx_date":  "2021-03-10T07:18:44.650Z",
+  "bal_qty": 25,
+  "name": "CIRCUIT BOARD",
+  "value": 687500
+},{
+  "_id": {
+    "$oid": "6061c279880c5f530a175271"
+  },
+  "tx_date":  "2021-03-29T11:20:20.559Z",
+  "bal_qty": 8,
+  "name": "Switch",
+  "value": 8000
+},{
+  "_id": {
+    "$oid": "6061c984880c5f530a175395"
+  },
+  "tx_date":  "2021-03-29T12:04:10.677Z",
+  "bal_qty": 10,
+  "name": "Switch",
+  "value": 10000
+},{
+  "_id": {
+    "$oid": "6062f5d5303dfc3f7463e213"
+  },
+  "tx_date":  "2021-03-30T09:56:11.979Z",
+  "bal_qty": 10,
+  "name": "PRINTING AND STATIONARY",
+  "value": 6500
+},{
+  "_id": {
+    "$oid": "6065b6bbf20bf73d50463eac"
+  },
+  "tx_date":  "2021-04-01T12:02:48.866Z",
+  "bal_qty": 1,
+  "name": "Spring Pet Bottle 1000ml",
+  "value": 2000
+},{
+  "_id": {
+    "$oid": "6068180bacb86d105c931c9b"
+  },
+  "tx_date":  "2021-03-01T05:41:48.218Z",
+  "bal_qty": 1,
+  "name": "CIRCUIT BOARD",
+  "value": 250
+},{
+  "_id": {
+    "$oid": "60681a24acb86d105c93217e"
+  },
+  "tx_date":  "2021-04-03T07:31:58.934Z",
+  "bal_qty": 1,
+  "name": "CIRCUIT BOARD",
+  "value": 10000
+},{
+  "_id": {
+    "$oid": "60ac9235a1200375c393743f"
+  },
+  "tx_date":  "2021-05-25T05:58:21.078Z",
+  "bal_qty": 3,
+  "name": "PLC PANELS",
+  "value": null
+},{
+  "_id": {
+    "$oid": "60ac994ba1200375c393784f"
+  },
+  "tx_date":  "2021-05-25T06:29:04.702Z",
+  "bal_qty": 5,
+  "name": "Control Panel ",
+  "value": null
+},{
+  "_id": {
+    "$oid": "60acb852a1200375c3939c14"
+  },
+  "tx_date":  "2020-01-26T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 4606
+},{
+  "_id": {
+    "$oid": "60acb856a1200375c3939c2e"
+  },
+  "tx_date":  "2019-12-21T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 3250
+},{
+  "_id": {
+    "$oid": "60acb859a1200375c3939c4c"
+  },
+  "tx_date":  "2019-10-14T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 3260
+},{
+  "_id": {
+    "$oid": "60acb85ca1200375c3939c66"
+  },
+  "tx_date":  "2021-05-25T07:59:53.615Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 60900
+},{
+  "_id": {
+    "$oid": "60acb860a1200375c3939c80"
+  },
+  "tx_date":  "2019-08-12T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 10800
+},{
+  "_id": {
+    "$oid": "60acb864a1200375c3939c9a"
+  },
+  "tx_date":  "2019-08-08T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 76100
+},{
+  "_id": {
+    "$oid": "60acb868a1200375c3939cb4"
+  },
+  "tx_date":  "2019-08-01T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 42800
+},{
+  "_id": {
+    "$oid": "60acb86ea1200375c3939cd2"
+  },
+  "tx_date":  "2019-07-31T18:30:00Z",
+  "bal_qty": 5,
+  "name": "Material Purchase",
+  "value": 13000
+},{
+  "_id": {
+    "$oid": "60acb86ea1200375c3939cd3"
+  },
+  "tx_date":  "2019-07-31T18:30:00Z",
+  "bal_qty": 2,
+  "name": "Material Purchase",
+  "value": 1152
+},{
+  "_id": {
+    "$oid": "60acb874a1200375c3939cf1"
+  },
+  "tx_date":  "2019-07-22T18:30:00Z",
+  "bal_qty": 1,
+  "name": "Material Purchase",
+  "value": 3226
+}]

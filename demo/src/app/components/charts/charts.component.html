@@ -1,0 +1,105 @@
+<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> -->
+<div class="row charts">
+    <div class="col-6" *ngFor="let chart of chartAxis;let index=index">
+        <!-- <button class="btn btn-info" (click)="toogleData()">Refresh</button> -->
+        <h1>{{chart.name}} - {{chart.type}}</h1>
+        <datalytics-charts [id]="index+1" [data]="data" [chartAxis]="chart" 
+        [chartOptions]="{
+            legend:true,
+            localization: {
+                decimal: '.',
+                thousands: ',',
+                grouping: [
+                    3,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2
+                ],
+                currency: [
+                    '\u20b9',
+                    ''
+                ]
+            },
+            animation:true,
+            title:chart.name,
+            tooltip:{grouped:false},
+            xaxis:'D2',
+            gridY:false,
+            height:300
+            }" 
+            [currentColorTheme]="colorTheme">
+        </datalytics-charts>
+    </div>
+    <!-- <div class="col-6">
+        <datalytics-charts [id]="2" [data]="data" [chartAxis]="chartAxis2"
+            [chartOptions]="{legend:false,animation:false,title:'Montly Income vs Sales vs Expenses'}">
+        </datalytics-charts>
+    </div> -->
+    <!-- <div class="col-6">
+      
+        <datalytics-charts [id]="3" [data]="data" [chartAxis]="chartAxis3"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="4" [data]="data" [chartAxis]="chartAxis4"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="5" [data]="data" [chartAxis]="chartAxis5"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="6" [data]="data" [chartAxis]="chartAxis6"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="7" [data]="data" [chartAxis]="chartAxis7"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="8" [data]="data" [chartAxis]="chartAxis8"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="9" [data]="data" [chartAxis]="chartAxis9"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="10" [data]="data" [chartAxis]="chartAxis10"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',height:'500px',width:'500px',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="11" [data]="data" [chartAxis]="chartAxis11"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div>
+    <div class="col-6">
+      
+        <datalytics-charts [id]="12" [data]="data" [chartAxis]="chartAxis12"
+            [chartOptions]="{legend:true,animation:true,title:'Montly Income vs Sales vs Expenses',tooltip:{grouped:false},xaxis:'D2'}">
+        </datalytics-charts>
+    </div> -->
+
+</div>

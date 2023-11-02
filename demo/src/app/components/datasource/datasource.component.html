@@ -1,0 +1,23 @@
+<div class="row mb-2 mr-1">
+  <div class="col-12">
+    <a routerLink="/datasource/add" class="btn btn-primary float-right">Add Data Soruce</a>
+  </div>
+</div>
+
+<!-- <datalytics-ds [dataSource]="dataSource" [tableColumns]="tableColumns"></datalytics-ds> -->
+
+<ng-template #actionTemplate let-data>
+  <div>
+    <button type="button" class="btn btn-primary action-btn" routerLink="/datasource/edit/{{data._id}}">Edit</button>
+    <div class="btn-group" ngbDropdown role="group" container="body" aria-label="Button group with nested dropdown">
+      <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+      <div class="dropdown-menu" ngbDropdownMenu>
+        <button ngbDropdownItem routerLink="/datasource/clone/{{data._id}}"
+          routerLinkActive="router-link-active">Clone</button>
+        <button ngbDropdownItem (click)="convertToReport(data._id)"
+          routerLinkActive="router-link-active">Conver to Report</button>
+        <button ngbDropdownItem (click)="deleteDataSource(data._id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

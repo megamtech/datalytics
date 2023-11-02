@@ -1,0 +1,45 @@
+<table class="table table-bordered main-table table-sm pivotTable">
+  <thead class="h">
+    <tr *ngFor="let rows of tableHeader">
+
+      <th *ngFor="let col of rows" [attr.colspan]="col.cols" [attr.rowspan]="col.rows" class="colNames">{{col.name}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of _data">
+      <td *ngFor="let col of getObjectKeys(row);let i=index" class="{{formatting[i]?.class}}">
+        <span [ngSwitch]="formatting[i]?.format">
+          <p *ngSwitchCase="'currency'">
+            {{row[col]|currency:formatting[i].formatStyle[0]:'symbol':formatting[i].formatStyle[1]}}
+          </p>
+          <p *ngSwitchCase="'date'">
+            {{row[col]|date:formatting[i].formatStyle}}
+          </p>
+          <p *ngSwitchDefault>
+            {{row[col]}}
+          </p>
+        </span>
+        <!-- {{row[col]}} -->
+      </td>
+    </tr>
+    <tr *ngIf="settings.columnTotal==true" class="colTotal">
+      <td [attr.colspan]="keepColumns.length">
+        {{settings.columnTotalText}}
+      </td>
+      <td *ngFor="let coltotal of columnTotalValues;let i=index" class="{{formatting[i+keepColumns.length]?.class}}">
+        <span [ngSwitch]="formatting[i+keepColumns.length]?.format">
+          <p *ngSwitchCase="'currency'">
+            {{coltotal}}
+          </p>
+          <p *ngSwitchCase="'date'">
+            {{coltotal}}
+          </p>
+          <p *ngSwitchDefault>
+            {{coltotal}}
+          </p>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

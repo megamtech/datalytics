@@ -1,0 +1,333 @@
+<div class="row filter-bar">
+  <div *ngFor="let error of errors;" class="col-12 alert alert-{{error.type}}" role="alert">
+    {{error.reason}}
+    <button type="button" *ngIf="error.isDismissable" class="btn-close" data-bs-dismiss="alert"
+      aria-label="Close"></button>
+  </div>
+  <div class="col-12">
+    <div *ngIf="displayInline==false" class="row">
+      <ng-template [ngTemplateOutlet]="searchInput"></ng-template>
+    </div>
+    <div *ngIf="displayInline==true">
+      <div class="card mb-4">
+        <div class="card-header " *ngIf="settings.title">
+          <div class="row">
+            <div class="col {{settings.title_class}}">{{settings.title}}</div>
+            <div *ngIf="settings.buttons.length>0" class="col text-right">
+              <button *ngFor="let item of settings.buttons" class="{{item.class}}" [routerLink]="[item.url]">
+                <i *ngIf="item?.icon!=''" class="{{item.icon}}"></i>
+                {{item.name}}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <form class="form-horizontal" role="form">
+            <div class="row">
+              <ng-container *ngFor="let filter of filterArray">
+                <div class="{{inputSize}}" [ngClass]="{'border-danger-inline': filter.filterRequired}">
+                  <ng-container *ngTemplateOutlet="filterInput, context: {
+                      filter:filter,
+                      filterDateOptions:filterDateOptions,
+                      onChangeTypeahead: onChangeTypeahead
+                    }">
+                  </ng-container>
+                </div>
+              </ng-container>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <div *ngIf="settings.help==true">
+            Use <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to search and <kbd>Ctrl</kbd> + <kbd>Del</kbd> to clear all filter(s)
+          </div>
+          <div class=" text-right">
+            <button type="button" class="{{settings.search.class}}" (click)="search(); ">
+              <span class="{{settings.search.icon}}" aria-hidden="true"></span> {{settings.search.name}}
+            </button>
+            <button type="button" class="{{settings.clear.class}}" (click)="clear()">
+              <span class="{{settings.clear.icon}}" aria-hidden="true"></span> {{settings.clear.name}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #searchInput>
+  <div ngbDropdown class=" pr-0 recent-filters col-1" *ngIf="recentSearches.length>0">
+    <button class="btn recent-filter" ngbDropdownToggle>Recent Searches</button>
+    <ul ngbDropdownMenu>
+      <li ngbDropdownItem *ngFor="let filter of recentSearches;let i = index">{{filter.name}}</li>
+      <li ngbDropdownItem>
+        <hr class="dropdown-divider">
+      </li>
+      <li ngbDropdownItem>Clear recent searches</li>
+    </ul>
+  </div>
+  <div class="input-group filter-field " [ngClass]="{'col-8':recentSearches.length>0,'col-9':recentSearches.length==0}"
+    id="adv-search" container="body">
+    <div (keydown)="selectFilter($event)" class="filter-list">
+      <ul>
+        <li ngbDropdown #changeFilterDropDown="ngbDropdown" class="filter" tabindex="{{i+1}}"
+          *ngFor="let filter of filterArray;let i = index" [ngClass]="{'border-danger': filter.filterRequired}">
+          <div ngbDropdownToggle>
+            <div class="column">{{filter.name}}</div>
+            <div class="type" [title]="filter.filterType?.name">{{filter.filterType?.icon}}</div>
+            <div class="value" title="{{filter?.values|json}}">
+              &nbsp;
+              <span [ngSwitch]="filter.dataType">
+                <span *ngSwitchCase="'date'">
+
+                  <span *ngIf="filter.filterType.prop=='between'">
+                    {{filter?.values.start|date:filter.format}}-{{filter?.values.end|date:filter.format}}
+                  </span>
+                  <span *ngIf="filter.filterType.prop!='between'">
+                    {{filter?.values.start|date:filter.format}}
+                  </span>
+
+                </span>
+                <span *ngSwitchCase="'currency'">
+                  {{filter?.values|currency:filter.format}}
+                </span>
+                <span *ngSwitchCase="'option'">
+
+                </span>
+                <span *ngSwitchCase="'number'">
+
+                </span>
+                <span *ngSwitchDefault>
+                  {{filter?.values}}
+                </span>
+              </span>
+              <span *ngIf="filter?.values?.start" class="text-info">
+                <i class="text-info fa fa-question "
+                  title="From {{filter.values.start}} - End {{filter.values.end}}"></i>
+              </span>
+              <span *ngIf="filter?.values?.length>1" class="text-info">
+                <i class="text-info fa fa-question " ngbPopover="You see, I show up on hover!"
+                  triggers="mouseenter:mouseleave" popoverTitle="Pop title"
+                  title="From {{filter.values.start}} - End {{filter.values.end}}"></i>
+              </span>
+              <span *ngIf="!filter.filterRequired" (click)="removeFilter(i);$event.stopPropagation();">&nbsp;
+                <i class="fa fa-close"></i>
+              </span>
+            </div>
+          </div>
+          <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="dropdown-menu dropdown-menu-lg-right"
+            style="min-width: 30rem;">
+            <form class="p-2">
+              <h4>Change Filter</h4>
+              <div class="form-group row">
+                <label class="col-2">Filter</label>
+                <div class="col-10">
+                  {{filter.name}}
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2">Condition</label>
+                <div class="col-10">
+                  <ng-select #input [items]="filter.filterConditionTypes" name="changefilterCondition"
+                    [(ngModel)]="filter.filterType" class="" id="changefilterCondition"
+                    [ngModelOptions]="{standalone: true}">
+                    <ng-template ng-option-tmp ng-label-tmp let-item="item" let-index="index">
+                      {{item.name}} ({{item.icon}})
+                    </ng-template>
+                  </ng-select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2">Value</label>
+                <div class="col-10">
+                  <ng-container *ngTemplateOutlet="filterInput, context: {
+                  filter:filter,
+                  filterDateOptions:filterDateOptions,
+                  onChangeTypeahead: onChangeTypeahead
+                }">
+                  </ng-container>
+                </div>
+              </div>
+
+              <button class="btn btn-danger"
+                (click)="$event.stopPropagation;changeFilterDropDown.close();">Cancel</button>
+              <button class="btn btn-primary mr-5"
+                (click)="changeFilterCondition(filter,i);$event.stopPropagation;changeFilterDropDown.close();">Edit</button>
+            </form>
+          </div>
+        </li>
+        <li tabindex="1000" class="filter-add" ngbDropdown #addFilterDropDown="ngbDropdown">
+          <div class="new-filter-text" ngbDropdownToggle>
+            <i class="fa fa-plus "></i>
+            Add Filter
+          </div>
+          <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="dropdown-menu dropdown-menu-lg-right"
+            style="min-width: 30rem;">
+            <form class="p-2">
+              <h4>Add Filter</h4>
+              <div class="form-group row">
+                <label class="col-2">Filter</label>
+                <div class="col-10">
+                  <ng-select #input [items]="filterDropDownValues" (change)="loadFilterTypes($event)"
+                    name="addfilterColumn" [(ngModel)]="filterColumn" class="" id="filterColumn"
+                    [ngModelOptions]="{standalone: true}">
+                    <ng-template ng-option-tmp ng-label-tmp let-item="item" let-index="index">
+                      {{item.name}} ({{item.dataType}})
+                    </ng-template>
+
+                  </ng-select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2">Condition</label>
+                <div class="col-10">
+                  <ng-select #input [items]="selectedColumnFilterTypes" name="filterCondition"
+                    [(ngModel)]="filterCondition" class="" id="filterCondition" [ngModelOptions]="{standalone: true}">
+                    <ng-template ng-option-tmp ng-label-tmp let-item="item" let-index="index">
+                      {{item.name}} ({{item.icon}})
+                    </ng-template>
+                  </ng-select>
+                </div>
+              </div>
+              <div class="form-group row" *ngIf="filterColumn?.filterType!=undefined">
+                <label class="col-2">Value</label>
+                <div class="col-10">
+                  <ng-container *ngTemplateOutlet="filterInput, context: {
+                    filter:filterColumn,
+                    filterCondition:filterCondition,
+                    onChangeTypeahead: onChangeTypeahead
+                  }">
+                  </ng-container>
+                </div>
+              </div>
+
+              <button class="btn btn-danger" (click)="$event.stopPropagation;addFilterDropDown.close();">
+                Cancel
+              </button>
+              &nbsp;
+              <button class="btn btn-primary mr-5"
+                (click)="addFilter(filterColumn,filterCondition);$event.stopPropagation;addFilterDropDown.close();">
+                Add
+              </button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-2 d-grid gap-2 d-md-block align-middle">
+    <button type="button" class="col-8 btn btn-primary" (click)="search()">
+      <i class="fa fa-search"></i> Search
+    </button>
+    &nbsp;
+    <button type="button btn-sm" class="col-3 btn btn-danger" (click)="clear()">
+      <i class="fa fa-trash"></i>
+    </button>
+  </div>
+  <div ngbDropdown class=" pl-0 filter-groups col-1" *ngIf="filterGroups.length>0">
+    <button class="btn filter-group" ngbDropdownToggle>GroupBy</button>
+    <ul ngbDropdownMenu>
+      <li ngbDropdownItem *ngFor="let filter of filterGroups;let i = index">{{filter.name}}</li>
+      <li ngbDropdownItem>
+        <hr class="dropdown-divider">
+      </li>
+      <li ngbDropdownItem>Clear grouping</li>
+    </ul>
+  </div>
+</ng-template>
+
+
+<ng-template #filterInput let-filter="filter" let-filterCondition="filterCondition"
+  let-onChangeTypeahead="onChangeTypeahead" let-filterDateOptions="filterDateOptions">
+  <ng-container [ngSwitch]="filter.filterUIType">
+    <ng-container *ngSwitchCase="'text'">
+      <input #input type="text" name="{{filter.prop}}" class="form-control mb-2 mr-sm-2" [id]="filter.prop"
+        placeholder="{{filter.name}}" [(ngModel)]="filter['values']" [ngModelOptions]="{standalone: true}">
+    </ng-container>
+    <ng-container *ngSwitchCase="'number'">
+      <input #input type="number" name=" {{filter.prop}}" class="form-control mb-2 mr-sm-2" [id]="filter.prop"
+        placeholder="{{filter.name}}" [(ngModel)]="filter['values']" [ngModelOptions]="{standalone: true}">
+    </ng-container>
+    <ng-container *ngSwitchCase="'currency'">
+      <input #input type="number" name=" {{filter.prop}}" class="form-control mb-2 mr-sm-2" [id]="filter.prop"
+        placeholder="{{filter.name}}" [(ngModel)]="filter['values']" [ngModelOptions]="{standalone: true}">
+    </ng-container>
+    <ng-container *ngSwitchCase="'typeSelect'">
+      <ng-select #input (search)="onChangeTypeahead($event)" (focus)="selectedFilter(filter.prop)"
+        [items]="filter.filterData" [typeahead]="filter.dynamicData" name="{{filter.prop}}"
+        [(ngModel)]="filter['values']" class="" placeholder="Select {{filter.name}}" bindLabel="{{filter.filterLabel?filter.filterLabel:'name'}}"
+        [id]="filter.prop" bindValue="{{filter.filterId?filter.filterId:'value'}}"
+        [ngModelOptions]="{standalone: true}">
+      </ng-select>
+    </ng-container>
+    <ng-container *ngSwitchCase="'typeMultiSelect'">
+      <div class="multi-select">
+        <ng-select #input [items]="filter.filterData" (search)="onChangeTypeahead($event)"
+          (focus)="selectedFilter(filter.prop)" name="{{filter.prop}}" [(ngModel)]="filter['values']" class=""
+          bindLabel="{{filter.filterLabel?filter.filterLabel:'name'}}" placeholder="Select {{filter.name}}" [id]="filter.prop"
+          bindValue="{{filter.filterId?filter.filterId:'value'}}" [selectableGroup]="true" [closeOnSelect]="false"
+          [multiple]="true" [ngModelOptions]="{standalone: true}">
+          <ng-container>
+            <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+              <input id="item-{{index}}" name="item-{{index}}" type="checkbox" [ngModel]="item$.selected" />
+              {{item[(filter.filterLabel?filter.filterLabel:'name')]}}
+            </ng-template>
+            <ng-template ng-label-tmp let-item="item" let-clear="clear">
+              {{item[(filter.filterLabel?filter.filterLabel:'name')]}}
+              <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+            </ng-template>
+            <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+              <div class="ng-value" *ngFor="let item of items | slice:0:2">
+                {{item[(filter.filterLabel?filter.filterLabel:'name')]}}
+                <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+              </div>
+              <div class="ng-value" *ngIf="items.length > 2">
+                <span class="ng-value-label">{{items.length - 2}} more...</span>
+              </div>
+            </ng-template>
+          </ng-container>
+        </ng-select>
+        <button (click)="open(content,filter)" name="filterpaste" class="btn btn-secondray-outline">
+          <i class="d-dot-3" aria-hidden="true"></i>
+        </button>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'date'">
+      <input #input type="text" [id]="filter.prop" name="{{filter.prop}}" ngxDaterangepicker class="form-control"
+        [(ngModel)]="filter.values" [showCustomRangeLabel]="true" placeholder="Select {{filter.name}}" [alwaysShowCalendars]="true" [showDropdowns]="true"
+        [autoApply]="true" [ranges]="filter.filterDateRanges" [locale]="{format:filter.format}" [linkedCalendars]="true"
+        [showClearButton]="true" />
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Paste Values</h4>
+    <button type="button" class="btn-close btn" aria-label="Close" (click)="modal.dismiss('Cross click')">X</button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label>Seperator</label>
+        <div class="input-group">
+          <select name="separator" class="form-control" [(ngModel)]="separator">
+            <option value="">New Line</option>
+            <option value=",">Comma Seperated</option>
+            <option value=";">SemiColon Seperated</option>
+          </select>
+
+
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <textarea id="pasteValues" class="form-control" name="paste_values" [(ngModel)]="paste_values"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark"
+      (click)="pasteValues($event,paste_values);modal.dismiss('Cross click');">Paste</button>
+  </div>
+</ng-template>

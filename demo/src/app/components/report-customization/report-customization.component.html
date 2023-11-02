@@ -1,0 +1,52 @@
+<!-- <datalytics-report-customization-add
+[customizationData]="data"
+(addReport)="addReportCustomization($event)">
+
+</datalytics-report-customization-add> -->
+<div class="row mb-2 mr-1">
+  <div class="col-12">
+    <a routerLink="/customization/add" class="btn btn-primary float-right">Add Customization</a>
+  </div>
+</div>
+
+<!-- <datalytics-report-customization [reportCustomizations]="reportCustomizations" [tableColumns]="tableColumns">
+</datalytics-report-customization> -->
+
+<ng-template #actionTemplate let-data>
+  <div>
+    <button type="button" class="btn btn-primary action-btn" routerLink="/customization/edit/{{data._id}}">Edit</button>
+    <div class="btn-group" ngbDropdown role="group" container="body" aria-label="Button group with nested dropdown">
+      <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+      <div class="dropdown-menu" ngbDropdownMenu>
+        <!-- <button ngbDropdownItem>Edit</button> -->
+        <button ngbDropdownItem routerLink="/customization/clone/{{data._id}}"
+          routerLinkActive="router-link-active">Clone</button>
+        <button ngbDropdownItem (click)="deleteCustomization(data._id)">Delete</button>
+        <button ngbDropdownItem routerLink="/tabular/{{data._id}}">View</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- <div *ngIf="reportCustomizations.data.length>0">
+    <datalytics-tabular-report [data]="reportCustomizations"
+        [locale]="{'no_records':'No records for the selected criteria'}" [pageSize]="1000" [columns]="tableColumns"
+        (pageChange)="pageChange($event)" (sortChange)="applySort($event)">
+    </datalytics-tabular-report>
+</div>
+<div *ngIf="reportCustomizations.data.length==0">
+    Loading data please wait...
+</div>
+<ng-template #actionTemplate let-data>
+    <button type="button" class="btn btn-primary" routerLink="/customization-add/{{data._id}}">Edit</button>
+  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+    <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+    <div class="dropdown-menu" ngbDropdownMenu>
+      <button ngbDropdownItem>One</button>
+      <button ngbDropdownItem>Two</button>
+      <button ngbDropdownItem>Four!</button>
+    </div>
+  </div>
+    <a class="btn btn-primary" >Edit</a>
+</ng-template> -->
+<!-- <datalytics-report-customization></datalytics-report-customization> -->

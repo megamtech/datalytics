@@ -1,0 +1,93 @@
+{
+  "name": "@megamtech-labs/datalytics",
+  "version": "8.14.13",
+  "author": "Megam Technologies",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "homepage": "https://labs.megamtech.com/megamtech-labs/datalytics/-/wikis",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port 4402",
+    "demo:build": "ng build --configuration production",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "ngc": "./node_modules/.bin/ngc -p tsconfig.json",
+    "build": "ng-packagr -p ng-package.json",
+    "publish": "npm publish dist/"
+  },
+  "private": false,
+  "peerDependencies": {
+    "@megamtech-labs/ngx-datepicker": "*",
+    "@ng-bootstrap/ng-bootstrap": "*",
+    "@ng-select/ng-select": "*",
+    "@swimlane/ngx-datatable": "*",
+    "angular-file": "*",
+    "billboard.js": "*",
+    "d3": "*",
+    "date-fns": "*"
+  },
+  "devDependencies": {      
+    "@angular-devkit/build-angular": "~16.2.10",
+    "@angular/animations": "~16.2.10",
+    "@angular/cdk": "~16.2.10",
+    "@angular/cli": "~16.2.10",
+    "@angular/common": "~16.2.10",
+    "@angular/compiler": "~16.2.10",
+    "@angular/compiler-cli": "~16.2.10",
+    "@angular/core": "~16.2.10",
+    "@angular/forms": "~16.2.10",
+    "@angular/localize":"^14.2.11",
+    "@angular/platform-browser": "~14.1.0",
+    "@angular/platform-browser-dynamic": "~14.1.0",
+    "@angular/router": "~14.1.0",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@megamtech-labs/ngx-datepicker": "^1.14.5",
+    "@ng-bootstrap/ng-bootstrap": "^13.0.0",
+    "@ng-select/ng-select": "^9.0.2",
+    "@swimlane/ngx-datatable": "^20.0.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "billboard.js": "^3.9.1",
+    "bootstrap": "^5.2.2",
+    "d3": "^6.7.0",
+    "date-fns": "^2.29.3",
+    "ng-packagr": "^14.2.1",
+    "protractor": "~7.0.0",
+    "rxjs": "~6.6.3",
+    "ts-node": "~8.3.0",
+    "tslib": "^2.4.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.6.2",
+    "zone.js": "~0.11.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://labs.megamtech.com/megamtech-labs/datalytics.git",
+    "directory": "projects/datalytics-angular/lib/"
+  },
+  "publishConfig": {
+    "@megamtech-labs:registry": "https://labs.megamtech.com/api/v4/projects/35/packages/npm/"
+  },
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "assets": [
+    "./assets"
+  ],
+  "ngPackage": {
+    "assets": [
+      "./styles/**/*",
+      "./assets/**/*"
+    ],
+    "lib": {
+      "entryFile": "src/datalytics-angular/index.ts"
+    },
+    "dest": "dist"
+  },
+  "whitelistedNonPeerDependencies": [
+    "."
+   
+  ],
+  "dependencies": {
+    
+  }
+}

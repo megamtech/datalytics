@@ -1,0 +1,130 @@
+{
+  "totals": {
+    "pre": [],
+    "post": [],
+    "grandTotal": []
+  },
+  "count": 12,
+  "data": [
+    {
+      "account_head": "Opening Balance",
+      "party_name": "Opening Balance",
+      "credit": 0,
+      "debit": 0,
+      "tx_date": "",
+      "voucher_type": "",
+      "to_by": "",
+      "voucher_ref_id": ""
+    },
+    {
+      "_id": "6049da226a70313e575e37bc",
+      "credit": 0,
+      "debit": 55,
+      "tx_date": 1615448176792,
+      "to_by": "To",
+      "particulars": "PRINTING AND STATIONARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049da1d6a70313e575e37b7",
+      "credit": 0,
+      "debit": 50,
+      "tx_date": 1615448141417,
+      "to_by": "To",
+      "particulars": "PRINTING AND STATIONARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049da146a70313e575e37ad",
+      "credit": 0,
+      "debit": 80,
+      "tx_date": 1615446722859,
+      "to_by": "To",
+      "particulars": "PRINTING AND STATIONARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049da106a70313e575e37a8",
+      "credit": 0,
+      "debit": 160,
+      "tx_date": 1615446688964,
+      "to_by": "To",
+      "particulars": "PRINTING AND STATIONARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049da096a70313e575e379e",
+      "credit": 0,
+      "debit": 300,
+      "tx_date": 1615446185251,
+      "to_by": "To",
+      "particulars": "PRINTING AND STATIONARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049d9ec6a70313e575e3780",
+      "credit": 0,
+      "debit": 352,
+      "tx_date": 1615444770675,
+      "to_by": "To",
+      "particulars": "REPAIRS AND MAINTANANCE",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049d9d76a70313e575e3767",
+      "credit": 0,
+      "debit": 800,
+      "tx_date": 1615443168358,
+      "to_by": "To",
+      "particulars": "PRINTING AND STATIONARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049d9d36a70313e575e3762",
+      "credit": 0,
+      "debit": 2500,
+      "tx_date": 1615443093884,
+      "to_by": "To",
+      "particulars": "SALARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049d9cf6a70313e575e375d",
+      "credit": 0,
+      "debit": 3448,
+      "tx_date": 1615442894935,
+      "to_by": "To",
+      "particulars": "staffwelfare",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049d9cb6a70313e575e3758",
+      "credit": 0,
+      "debit": 30,
+      "tx_date": 1615442766565,
+      "to_by": "To",
+      "particulars": "PRINTING AND STATIONARY",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "6049b2f86a70313e575dee80",
+      "credit": 0,
+      "debit": 160,
+      "tx_date": 1615442669005,
+      "to_by": "To",
+      "particulars": "REPAIRS AND MAINTANANCE",
+      "voucher_type": "Cash Payment"
+    },
+    {
+      "_id": "60478c7e71b276504f104608",
+      "credit": 0,
+      "debit": 25000000,
+      "tx_date": 1615301747870,
+      "to_by": "To",
+      "particulars": "bank  charges",
+      "voucher_type": "Cash Payment"
+    }
+  ],
+  "opening_balance": [],
+  "closing_balance": []
+}

@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "downlevelIteration": true,
+        "importHelpers": true,
+        "target": "es2020",
+        "module": "es2020",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "removeComments": true,
+        "noImplicitAny": false,
+        "declaration": true,
+        "sourceMap": false,
+        "outDir": "dist",
+        "lib": ["es2020", "dom"],
+        "baseUrl": "./",
+        "types": ["node"]
+    },
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "skipTemplateCodegen": true,
+        "skipMetadataEmit": false,
+        "strictMetadataEmit": true,
+        "annotationsAs": "decorators",
+        "strictInjectionParameters": true,
+        "strictTemplates": true,
+        "enableIvy":true,
+        "compilationMode": "partial"
+    },
+    "include": ["src/**/*","styles/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

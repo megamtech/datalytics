@@ -1,0 +1,9 @@
+<div *ngIf="_chartOptions.title!=''" class="row">
+  <h4 class="text-align-center col">{{_chartOptions.title}}</h4>
+</div>
+<div class="error-messages chart-error" *ngIf="error.status==true">
+  <div class="message" *ngFor="let message of error.messages">
+    {{message}}
+  </div>
+</div>
+<div id="datalytics_{{id}}_chart_container" class="datalytics-chart"></div>

@@ -1,0 +1,215 @@
+
+//   $ngx-datatable-background: yellow;
+//   $ngx-datatable-selected-active-background-hover: rgba(yellow, 0.2);
+// @import "../../src/datalytics-angular/lib/datalytics-angular.component.scss";
+@import "../../styles/default.theme.scss";
+
+$primary_border_color:yellow;
+$primary_color:blue;
+$primary:red;
+.ngx-datatable {
+    .datatable-body {
+      $myProgressBarHeight: 5px;
+      $myTransitionDuratrion: .15s;
+      .progress-linear {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: $myProgressBarHeight;
+        padding: 0;
+        margin: 0 0 $myProgressBarHeight 0;
+        position: absolute;
+        .container {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: $myProgressBarHeight;
+          -webkit-transform: translate(0, 0) scale(1, 1);
+          transform: translate(0, 0) scale(1, 1);
+          background-color: mat-color($primary, lighter);
+          .bar {
+            transition: all $myTransitionDuratrion linear;
+            -webkit-animation: query 0.5s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+            animation: query 0.5s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition: -webkit-transform $myTransitionDuratrion linear;
+            transition: transform $myTransitionDuratrion linear;
+            background-color: mat-color($primary);
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: $myProgressBarHeight;
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Progress bar animations
+   */
+  @keyframes query {
+    0% {
+      opacity: 1;
+      transform: translateX(-50%) scale(0, 1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(35%) scale(0.3, 1);
+    }
+  }
+  .md-drppicker {
+   &.double {
+      width: max-content !important;
+  }
+    width: max-content !important;
+  }
+
+// ngx-datatable: Master Table class
+// fixed-header: The header is fixed on the table
+// datatable-header: Header row class
+// datatable-header-cell: Header cell class
+// resizeable: Cell resizeable class
+// sortable: Cell drag/drop sortable class
+// longpress: Cell long-press activated
+// dragging: Cell dragging activated
+// sort-active: Sort active on column
+// sort-asc: Sort active on column with ascending applied
+// sort-desc: Sort active on column with descending applied
+// datatable-header-cell-label: Header cell text label
+// draggable: Header cell draggable class
+// datatable-body-row: Body row class
+// datatable-row-even: Odd row class
+// datatable-row-odd: Even row class
+// datatable-body-cell: Body cell class
+// sort-active: Sort active on column
+// sort-asc: Sort active on column with ascending applied
+// sort-desc: Sort active on column with descending applied
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.dropdown ul.dropdown-menu {
+  border-radius:4px;
+  box-shadow:none;
+  margin-top:20px;
+  width:300px;
+}
+.dropdown ul.dropdown-menu:before {
+  content: "";
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+  content: "";
+  border-bottom: 12px solid #ccc;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  position: absolute;
+  top: -12px;
+  right: 14px;
+  z-index: 9;
+}
+.locale-no-records{
+  text-align: center;
+}
+// :host {
+  // display: block;
+  // width: 100%;
+  // padding: 24px;
+  // box-sizing: border-box;
+
+  .playground-container {
+      width: 100%;
+  }
+
+  .controls-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+
+      & > * {
+          margin: 8px 24px 8px 0;
+      }
+  }
+
+  .grid-container {
+      padding: 4px;
+      box-sizing: border-box;
+      border: 1px solid gray;
+      border-radius: 2px;
+      background: #313131;
+  }
+
+  datalytics-grid-item {
+      color: #121212;
+  }
+
+  datalytics-grid {
+      transition: height 500ms ease;
+  }
+
+  .grid-item-content {
+      box-sizing: border-box;
+      background: #ccc;
+      border: 1px solid;
+      width: 100%;
+      height: 100%;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+.align-right{
+  text-align: right !important;
+}
+.align-center{
+  text-align: center !important;
+}
+.align-left{
+  text-align: left !important;
+}
+  .grid-item-remove-handle {
+      position: absolute;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      right: 0;
+
+      &::after {
+          content: 'x';
+          color: #121212;
+          font-size: 16px;
+          font-weight: 300;
+          font-family: Arial, sans-serif;
+      }
+  }
+
+  // Add custom drag mouse styles
+  datalytics-grid-item {
+      cursor: grab;
+
+      &.ktd-grid-item-dragging {
+          cursor: grabbing;
+      }
+  }
+
+  mat-chip-list, mat-chip {
+      pointer-events: none;
+      user-select: none;
+  }
+
+  .c3-xgrid, .c3-ygrid{
+    stroke-dasharray:none !important;
+}
+
+// }

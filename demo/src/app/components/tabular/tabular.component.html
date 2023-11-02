@@ -1,0 +1,23 @@
+<datalytics-report-filters (getFilterData)="search($event)" (getFilterTypeaheadData)="callAPI($event)"
+  [dynamicFilterData]="dynamicFilterData" [filters]="tableColumns" [name]="'Tabular Report'" [displayInline]="true">
+</datalytics-report-filters>
+<br />
+
+<br />
+<div class="row">
+  <div class="float-right col-12">
+    <!-- <datalytics-report-export [pdf]="true" [excel]="false" [API]="" [generate]="'local'">
+    </datalytics-report-export> -->
+  </div>
+</div>
+<div class="col-12">
+  <div *ngIf="tableList.count>0">
+    <datalytics-tabular-report [data]="tableList" [locale]="{'no_records':'No records for the selected criteria'}"
+      [pageSize]="pagination.pageSize" [columns]="tableColumns"
+      [summaryColumns]="{position:'bottom',pageTotal:tableList['data'][2],grandTotal:tableList['data'][2],class:'text-success'}"
+      (pageChange)="pageChange($event)" (sortChange)="applySort($event)">
+    </datalytics-tabular-report>
+  </div>
+
+</div>
+<ng-template #actionCellTmpl let-row="row" let-value="value"><button>TEST</button></ng-template>

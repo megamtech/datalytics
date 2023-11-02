@@ -1,0 +1,85 @@
+$circle-size: 5;
+$line-size: 3;
+
+// .dropdown-toggle {
+//   padding: 0.375rem 0.375rem;
+//   border: none;
+
+//   &::after {
+//     display: none;
+//   }
+// }
+
+.bb-line {
+  stroke-width: $line-size;
+  // filter: url(#shadow);
+}
+
+.bb-circle {
+  // fill: red !important;
+  stroke-width: $circle-size;
+  stroke: #fff;
+  // fill:orange;
+  height: 5px;
+  width: 5px;
+
+  &._expanded_ {
+    stroke-width: $circle-size;
+  }
+}
+
+// .bb-chart-arcs-background{
+//   fill: #ff7f0e !important;
+//   opacity: 0.5;
+// }
+svg {}
+
+// .datalytics-chart {
+//   border-radius: 15px;
+//   background: #e0e0e0;
+//   box-shadow: -25px 25px 50px #c7c7c7,
+//     25px -25px 50px #f9f9f9;
+// }
+
+.bb-chart-arcs g,
+.bb-chart-lines g:not(.bb-areas),
+.bb-chart-bars,
+.bb-chart-circles g circle,
+.bb-chart-radars g.bb-shapes polygon,
+.bb-chart-radars g.bb-shapes circle,
+.bb-legend-item {
+  filter: url(#shadow);
+}
+
+.bb-chart-arc {
+  filter: box-shadow(-3px -3px 10px #ffffff73, 2px 5px 5px rgba(94, 104, 121, 288));
+  border-radius: 50px;
+  background: #e0e0e0;
+
+}
+
+// .bb-chart-arcs-gauge-max, 
+// .bb-chart-arcs-gauge-min,
+// .bb-chart-arcs-background{
+//   display: none;
+//   }
+// box-shadow: -3px -3px 10px #ffffff73, 
+// 2px 5px 5px rgba(94, 104, 121, 288);
+// // .c3-gauge-value {
+// //   // fill: white !important;
+// //   font-family: "Lucida Console", Helvetica, sans-serif;
+// //   font-size: 40px !important;
+// //   transform: translateY(10px);
+// // }
+
+// // .c3-arc-data1 {
+// //   stroke: transparent !important;
+// // }
+.error-messages {
+  .message {
+    color: #ff0000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+}

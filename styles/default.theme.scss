@@ -1,0 +1,107 @@
+@import '~bootstrap/scss/bootstrap.scss';
+// @import '~c3/c3.min.css';
+@import "~billboard.js/dist/billboard.min.css";
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+// @import '~@fortawesome/fontawesome-free/css/all.css';
+@import url('../../assets/css/fontello.css');
+@import "~@ng-select/ng-select/themes/default.theme.css";
+// @import url('../../styles/font/fontello.woff');
+// @font-face {
+//   font-family: 'fontello';
+//   src: url('../../styles/font/fontello.eot?34844781');
+//   src: url('../../styles/font/fontello.eot?34844781#iefix') format('embedded-opentype'),
+//        url('../../styles/font/fontello.woff2?34844781') format('woff2'),
+//        url('../../styles/font/fontello.woff?34844781') format('woff'),
+//        url('../../styles/font/fontello.ttf?34844781') format('truetype'),
+//        url('../../styles/font/fontello.svg?34844781#fontello') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// .c3 {
+//     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+//       .d-chart-tooltip {
+//         // width: 16px;
+//         // height: 16px;
+//         // border-radius: 10px;
+//         // border: 2px solid #fff;
+//         // position: absolute;
+//         // background: rgba(255, 255, 255, 0.5);
+//         font-size: small;
+//         .arrow {
+//           // position:absolute;
+//           margin: 10px 0 0 88px;
+//           width: 0;
+//           height: 0;
+//           border-left: 10px solid transparent;
+//           border-right: 10px solid transparent;
+//           border-top: 10px solid #fff;
+//         }
+//         .content {
+//           padding: 2px;
+//           border-radius: 3px;
+//           border:2px solid white;
+//           .title{
+//             font-weight: bold;
+//           }
+//           .value{
+    
+//           }
+//           .multi-values{
+//             padding-bottom: 3px;
+//             margin-bottom: 3px;
+//             span{
+//               padding-right: 10px;
+//               width: 50%;
+//             }
+//             .color{
+//               border: 1px solid white;
+//               border-radius: 3px;
+//               width: 15%;
+//               // display: table-cell;
+//             }
+//             .title{
+              
+//               width: 45%;
+//               // display: table-cell;
+//             }
+//             .value{
+//               font-style: bold;
+//               width: 40%;
+//               // display: table-cell;
+//             }
+//           }
+//         }
+//       }
+//       .text-align-center {
+//         text-align: center;
+//       }
+    
+//       // .c3-tooltip-container {
+//       //   // border-radius: 5rem;
+//       //   // padding: 7rem;
+//       //   // margin: 2rem;
+//       //   .c3-tooltip {
+//       //     border-collapse: separate;
+//       //     border: solid black 1px;
+//       //     border-radius: 5rem;
+//       //   }
+//       // }
+    
+//       .c3-axis-x-label,
+//       .c3-axis-y-label {
+//         font-weight: bold !important;
+//       }
+//     }
+    .ngx-datatable { // datatable Style
+      .datatable-header { // header Style
+        .datatable-header-cell { // header Cell Style
+          .sort-btn.datatable-icon-sort-unset::before { // Icon Style
+            content: '\e800'; // You favorite Icon
+            font-family: "fontello";
+            font-style: normal; // Font Style
+         }
+        }
+      }
+     }
+    
